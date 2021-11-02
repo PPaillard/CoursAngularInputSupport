@@ -1,0 +1,7 @@
+<div *ngIf="posts.length > 0; else  noPosts">
+  <!-- Affichage des posts-->
+  <app-post *ngFor="let postActuel of posts" [post]="postActuel"></app-post>
+</div>
+<ng-template #noPosts>
+  Pas de posts dispo
+</ng-template>
